@@ -1,9 +1,23 @@
-# tomato-study
+git checkount -b local	创建本地分支，并切换至本地分支
 
-第一步：git clone <版本库的网址>
+git stash	隐藏本地更改
 
-第二步：git checkout dev 切换dev分支
+git stash pop	还原本地更改
 
-第三步：git pull 获取最新代码
+git pull origin [远程分支名]	拉取远程分支代码
 
-第四步：git commit -m "" 提交至暂存区
+git add .	添加所有更改文件
+
+git commit -m "remark"	提交暂存区文件至本地版本库
+
+git merge [分支名]	将指定分支代码合并至当前分支
+
+git push	将本地版本库代码推送至远程版本库
+
+git reflog	查看操作日志
+
+git reset --hard [版本号]	还原至指定版本号
+
+git reset HEAD [文件名]	把文件从暂存区撤销到工作区
+
+git checkout -- [文件名]	把文件还原至修改前状态
