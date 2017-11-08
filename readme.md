@@ -6,3 +6,4 @@
 
 第三步：git pull 获取最新代码
 
+第四步：git commit -m "" 提交至暂存区
