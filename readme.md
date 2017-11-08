@@ -21,3 +21,5 @@ git reset --hard [版本号]	还原至指定版本号
 git reset HEAD [文件名]	把文件从暂存区撤销到工作区
 
 git checkout -- [文件名]	把文件还原至修改前状态
+
+git push origin [本地分支名]:[远程分支名]	将本地分支代码提交至远程指定分支
