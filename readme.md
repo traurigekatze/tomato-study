@@ -23,3 +23,5 @@ git reset HEAD [文件名]	把文件从暂存区撤销到工作区
 git checkout -- [文件名]	把文件还原至修改前状态
 
 git push origin [本地分支名]:[远程分支名]	将本地分支代码提交至远程指定分支
+
+git fetch	项目上新建一个分支test，使用git branch -a看不到该远程分支，使用[git fetch]取回所有分支更新，就能看到该分支
