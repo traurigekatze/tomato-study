@@ -1,0 +1,11 @@
+ps -ef |grep [tomcat-base] 快速查看具体服务进程
+
+kill -9 [进程号] 删除指定进程
+
+rz 复制本地文件到当前目录
+
+cp [file name] [new name] 复制一份文件至当前目录
+
+mv [file name] [path] 移动文件至新目录
+
+rm -rf [file] 删除指定文件或内容
