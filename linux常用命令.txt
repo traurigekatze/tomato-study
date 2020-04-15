@@ -9,3 +9,65 @@ cp [file name] [new name] 复制一份文件至当前目录
 mv [file name] [path] 移动文件至新目录
 
 rm -rf [file] 删除指定文件或内容
+
+find / -name BaseApp-0.0.1-SNAPSHOT.jar 查找文件位置
+
+sar -u 1 5	每1秒采集一次CPU使用率，共采集5次
+*
+ps aux |grep redis
+
+ps aux输出格式：
+USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+
+redis     6774  0.0  0.0 142952  7416 ?        Ssl  May29   6:34 /usr/bin/redis-server 0.0.0.0:6379
+root     17190  0.0  0.0 112708   980 pts/0    S+   11:51   0:00 grep --color=auto redis
+ 
+格式说明：
+USER: 行程拥有者
+PID: pid
+%CPU: 占用的 CPU 使用率
+%MEM: 占用的记忆体使用率
+VSZ: 占用的虚拟记忆体大小
+RSS: 占用的记忆体大小
+TTY: 终端的次要装置号码 (minor device number of tty
+
+scp -r [root@192.168.5.92:/usr/local/redis] [/usr/local/redis ] 将[远程文件夹]复制至[指定目录]
+
+./bin/kafka-topics.sh --zookeeper localhost:2181 --list	查看kafka topic
+
+journalctl -u scf.service  -f 查看服务实时日志
+
+systemctl restart scf 重启服务
+
+reboot 重启机器
+
+top 查看cpu使用情况
+
+systemctl daemon-reload
+
+systemctl enable xxx
+
+redis-cli info replication redis 哨兵查看当前机器角色
+
+redis-cli -p 26379 INFO Sentinel 哨兵查看master
+
+netstat -anp|grep '192.168.5.95' 查看链接
+
+netstat -ano |findstr "219.143.241.168" windows 查看链接
+
+netstat -anp|grep 8080 查看端口使用情况
+
+lsof -i:8080
+
+nginx：
+	sudo systemctl stop nginx
+	sudo systemctl start nginx
+	sudo systemctl restart nginx
+	nginx -s reload 重启nginx
+
+cluster nodes redis-cluster 查看节点角色
+
+kafka 命令：
+	./kafka-topics.sh --zookeeper localhost:2181 --list 查看所有topic列表
+	./kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic spam-alert --time -1 查看topic内offset信息
+	./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order 消费topic

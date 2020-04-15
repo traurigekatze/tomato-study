@@ -1,0 +1,6 @@
+ipython				进行交互式编程
+
+exit()				退出交互式编程
+
+jupyter notebook	启动notebook
+

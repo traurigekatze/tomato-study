@@ -28,6 +28,8 @@ git fetch	项目上新建一个分支test，使用git branch -a看不到该远�
 
 git push origin :[分支名]	删除远程分支
 
+git merge --no-ff [分支名] 合并分支代码
+
 推送本地项目至git
 1：建好对应的git仓库
 2：本地：git init
@@ -35,3 +37,16 @@ git push origin :[分支名]	删除远程分支
 4：git commit -m ""
 5：git remote add origin ***.git [远程的git仓库地址]
 6：git push origin master
+
+mvn install -DskipTests	maven打包排除test
+
+mvn clean -DskipTests package -Pdev -- maven 打包
+
+mvn -Dserver.port=6443 clean -DskipTests package -Pdev -- maven 打包多参
+
+mvn install:install-file -Dfile=D:\mavenRepository\io\invault\molecule\1.0.0\molecule-api-1.0.0-SNAPSHOT.jar -DgroupId=io.invault -DartifactId=molecule-api -Dversion=1.0.0-SNAPSHOT -Dpackaging=jar
+maven 手动将jar包install到本地库
+
+netstat -ano|findstr "10003" 查看端口使用情况
+
+mvn mybatis-generator:generate mvn 生成 mybatis
