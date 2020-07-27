@@ -30,6 +30,8 @@ git push origin :[分支名]	删除远程分支
 
 git merge --no-ff [分支名] 合并分支代码
 
+git fetch -p  在拉取所有分支的同时，删除远程分支不存在的本地分支
+
 推送本地项目至git
 1：建好对应的git仓库
 2：本地：git init
